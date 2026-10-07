@@ -1,0 +1,44 @@
+{
+  "name": "@spiderbrain/synganglion",
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./memory": {
+      "types": "./dist/memory/index.d.ts",
+      "default": "./dist/memory/index.js"
+    },
+    "./physics/*": {
+      "types": "./dist/physics/*.d.ts",
+      "default": "./dist/physics/*.js"
+    },
+    "./eyes/*": {
+      "types": "./dist/eyes/*.d.ts",
+      "default": "./dist/eyes/*.js"
+    },
+    "./instincts/*": {
+      "types": "./dist/instincts/*.d.ts",
+      "default": "./dist/instincts/*.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "@spiderbrain/shared": "0.1.0"
+  },
+  "private": true,
+  "author": "Alnasrif Haliddin",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Nasrif30/SPIDERBRAIN.git",
+    "directory": "synganglion"
+  },
+  "engines": {
+    "node": ">=24.9.0"
+  }
+}

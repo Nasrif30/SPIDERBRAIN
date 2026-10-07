@@ -1,0 +1,25 @@
+{
+  "name": "@spiderbrain/live-web",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "author": "Alnasrif Haliddin",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Nasrif30/SPIDERBRAIN.git",
+    "directory": "dashboard"
+  },
+  "engines": {
+    "node": ">=24.9.0"
+  }
+}

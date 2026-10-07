@@ -1,0 +1,91 @@
+{
+  "name": "@naskilabot/spiderbrain",
+  "version": "0.1.1",
+  "type": "module",
+  "description": "Real-time behavioral web and AI monitoring powered by SynGanglion.",
+  "engines": {
+    "node": ">=24.9.0"
+  },
+  "workspaces": [
+    "packages/*",
+    "silk",
+    "synganglion",
+    "dashboard",
+    "deception",
+    "apps/demo-site"
+  ],
+  "bin": {
+    "spiderbrain": "dist/public/cli.js"
+  },
+  "scripts": {
+    "dev": "npm run dev --workspace @spiderbrain/demo-site",
+    "test:demo": "npm run test --workspace @spiderbrain/demo-site",
+    "build:demo": "npm run build --workspace @spiderbrain/demo-site",
+    "typecheck:demo": "npm run typecheck --workspace @spiderbrain/demo-site",
+    "build": "node apps/demo-site/scripts/build.mjs",
+    "typecheck": "node scripts/typecheck.mjs",
+    "test": "npm run build && node --test dist/tests/*.test.js apps/demo-site/dist/tests/*.test.js",
+    "demo": "npm run dev --workspace @spiderbrain/demo-site",
+    "watch": "node dist/cli/guardian/index.js watch",
+    "benchmark": "npm run build && node --expose-gc dist/tests/benchmark-calibration.js",
+    "benchmark:canaries": "npm run build && node --expose-gc dist/tests/benchmark-canaries.js",
+    "benchmark:storage": "npm run build && node --expose-gc dist/tests/benchmark-storage.js",
+    "benchmark:basic": "npm run build && node --expose-gc dist/tests/benchmark.js",
+    "arena": "npm run build && node dist/arena/index.js",
+    "start": "node dist/public/cli.js start",
+    "monitor": "node dist/public/cli.js monitor",
+    "prepack": "npm run build",
+    "pack:release": "npm run build && node scripts/stage-package.mjs && npm pack ./.spiderbrain/npm-release --pack-destination .spiderbrain"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "@types/express": "^5.0.0",
+    "@types/node": "^24.0.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^24.0.0",
+    "typescript": "^5.9.0",
+    "esbuild": "^0.28.2"
+  },
+  "author": "Alnasrif Haliddin",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nasrif30/SPIDERBRAIN.git"
+  },
+  "homepage": "https://github.com/Nasrif30/SPIDERBRAIN",
+  "bugs": {
+    "url": "https://github.com/Nasrif30/SPIDERBRAIN/issues"
+  },
+  "keywords": [
+    "security",
+    "monitoring",
+    "cybersecurity",
+    "observability",
+    "behavior-analysis",
+    "web-security",
+    "ai-monitoring",
+    "incident-response",
+    "typescript",
+    "synganglion"
+  ],
+  "main": "./dist/public/index.js",
+  "types": "./dist/public/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/public/index.d.ts",
+      "import": "./dist/public/index.js"
+    }
+  },
+  "files": [
+    "dist/public/**/*.js",
+    "dist/public/**/*.d.ts",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}

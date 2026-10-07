@@ -1,0 +1,32 @@
+{
+  "name": "@spiderbrain/sensor",
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=24.9.0"
+  },
+  "dependencies": {
+    "@spiderbrain/shared": "0.1.0",
+    "@spiderbrain/silk": "0.1.0",
+    "@spiderbrain/synganglion": "0.1.0",
+    "@spiderbrain/live-web": "0.1.0",
+    "@spiderbrain/deception": "0.1.0"
+  },
+  "private": true,
+  "author": "Alnasrif Haliddin",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Nasrif30/SPIDERBRAIN.git",
+    "directory": "packages/sensor"
+  }
+}

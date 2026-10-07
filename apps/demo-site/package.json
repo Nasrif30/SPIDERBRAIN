@@ -1,0 +1,37 @@
+{
+  "name": "@spiderbrain/demo-site",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24.9.0"
+  },
+  "scripts": {
+    "dev": "npm run build && node --watch dist/server/main.js",
+    "start": "node dist/server/main.js",
+    "traffic": "node scripts/traffic.mjs",
+    "build": "node scripts/build.mjs",
+    "typecheck": "tsc -p tsconfig.server.json --noEmit && tsc -p tsconfig.client.json --noEmit",
+    "test": "npm run build && node --test dist/tests/*.test.js"
+  },
+  "dependencies": {
+    "@spiderbrain/express": "0.1.0",
+    "@spiderbrain/sensor": "0.1.0",
+    "@spiderbrain/live-web": "0.1.0",
+    "express": "^5.1.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "vite": "^7.1.7"
+  },
+  "author": "Alnasrif Haliddin",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Nasrif30/SPIDERBRAIN.git",
+    "directory": "apps/demo-site"
+  }
+}

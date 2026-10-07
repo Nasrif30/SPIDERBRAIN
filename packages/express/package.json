@@ -1,0 +1,32 @@
+{
+  "name": "@spiderbrain/express",
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=24.9.0"
+  },
+  "peerDependencies": {
+    "express": ">=5 <6"
+  },
+  "dependencies": {
+    "@spiderbrain/sensor": "0.1.0",
+    "@spiderbrain/shared": "0.1.0"
+  },
+  "private": true,
+  "author": "Alnasrif Haliddin",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Nasrif30/SPIDERBRAIN.git",
+    "directory": "packages/express"
+  }
+}

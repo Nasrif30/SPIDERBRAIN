@@ -1,0 +1,25 @@
+{
+  "name": "@spiderbrain/deception",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "dependencies": {
+    "@spiderbrain/shared": "0.1.0"
+  },
+  "author": "Alnasrif Haliddin",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Nasrif30/SPIDERBRAIN.git",
+    "directory": "deception"
+  },
+  "engines": {
+    "node": ">=24.9.0"
+  }
+}

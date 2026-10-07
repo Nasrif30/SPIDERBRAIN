@@ -1,0 +1,6 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": { "rootDir": ".", "outDir": "dist" },
+  "include": ["cli/**/*.ts", "sdk/**/*.ts", "apps/demo-site/server/**/*.ts", "apps/demo-site/shared/**/*.ts", "examples/**/*.ts", "tests/**/*.ts", "arena/**/*.ts"],
+  "references": [{ "path": "packages/shared" }, { "path": "silk" }, { "path": "synganglion" }, { "path": "dashboard" }, { "path": "deception" }, { "path": "packages/sensor" }, { "path": "packages/express" }]
+}

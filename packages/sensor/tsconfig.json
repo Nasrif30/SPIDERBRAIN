@@ -1,0 +1,1 @@
+{ "extends": "../../tsconfig.base.json", "compilerOptions": { "rootDir": "src", "outDir": "dist" }, "include": ["src/**/*.ts"], "references": [{ "path": "../shared" }, { "path": "../../silk" }, { "path": "../../synganglion" }, { "path": "../../dashboard" }, { "path": "../../deception" }] }
